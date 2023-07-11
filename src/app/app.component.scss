@@ -1,0 +1,19 @@
+
+
+.div-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+::ng-deep .p-button {
+    background-color: #EC0016 !important;
+    border-color: #EC0016 !important;
+    color: #FFFFFF !important; 
+        
+    
+}
+p-button:first-child {
+    margin-right: 10px;
+}

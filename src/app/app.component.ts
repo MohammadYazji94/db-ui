@@ -9,8 +9,8 @@ export class AppComponent {
   title = 'DB-UI';
 
   trips = [
-    { from: "Frankfurt(Main)Hbf", to: "Berlin Hbf", starttime: "09:40", endtime: "11:20" },
-    { from: "Berlin Hbf", to: "Frankfurt(Main)Hbf", starttime: "09:40", endtime: "11:20" }
+    { from: "Frankfurt Hbf", to: "Berlin Hbf", starttime: "09:40", endtime: "11:20" },
+    { from: "Berlin Hbf", to: "Frankfurt Hbf", starttime: "10:40", endtime: "12:20" }
   ];
 
   filteredTrips = this.trips;

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListeComponent } from './liste/liste.component';
+import { StepsModule } from 'primeng/steps';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListeComponent } from './liste/liste.component';
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    StepsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

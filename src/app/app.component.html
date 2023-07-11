@@ -1,16 +1,50 @@
 <h2>DB Fahrplananzeige</h2>
 
 <div class="div1 div-container">
-    <p-button class="buttons" (click)="filterTrips('Frankfurt(Main)Hbf', 'from')">von Frankfurt</p-button>
-    <p-button class="buttons" (click)="filterTrips('Frankfurt(Main)Hbf', 'to')">nach Frankfurt</p-button>
-  </div>
+    <p-button class="buttons" (click)="filterTrips('Frankfurt Hbf', 'from')">von Frankfurt</p-button>
+    <p-button class="buttons" (click)="filterTrips('Frankfurt Hbf', 'to')">nach Frankfurt</p-button>
+</div>
+
+
+<div class="lists">
+  <nav class="navi">
+    <div *ngFor="let trip of trips" class="start">
+      <span class="startlocation">
+        <span class="startlocation-name">{{ trip.from }}</span>
+        <span class="circle-container">
+          <span class="pi pi-circle big-circle"></span>
+          <span class="pi pi-circle-fill small-circle"></span>
+        </span>
+        <span>{{ trip.starttime }}</span>
+      </span>
+    </div>
+    <div *ngFor="let trip of trips" class="end">
+      <span class="endlocation">
+        <span class="endlocation-name">{{ trip.to }}</span>
+        <span class="">
+          <span class="pi pi-circle"></span>
+        </span>
+        <span>{{ trip.endtime }}</span>
+      </span>
+    </div>
+  </nav>
+</div>
+
+
+
+
   
-  <table>
-    <tr *ngFor="let trip of filteredTrips">
-      <td>{{ trip.from }}</td>
-      <td>{{ trip.to }}</td>
-      <td>{{ trip.starttime }}</td>
-      <td>{{ trip.endtime }}</td>
+  <!-- <table class="tables">
+    <tr *ngFor="let trip of filteredTrips" class="lists">
+      <div>
+        <td>{{ trip.from }}</td>
+        <td>{{ trip.to }}</td>
+      </div>
+      
+      <div>
+        <td>{{ trip.starttime }}</td>
+        <td>{{ trip.endtime }}</td>
+      </div>
     </tr>
-  </table>
+  </table> -->
   

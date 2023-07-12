@@ -25,7 +25,21 @@ export class AppComponent {
 
   filteredTrips = this.trips;
 
+  tripDurations: { [key: string]: string } = {};
+
   filterTrips(city: string, direction: 'from' | 'to') {
     this.filteredTrips = this.trips.filter((trip) => trip[direction] === city);
   }
+
+  ngOnInit() {
+    this.trips.forEach(trip => {
+      const start = new Date(`1970-01-01T${trip.starttime}:00`);
+      const end = new Date(`1970-01-01T${trip.endtime}:00`);
+      const duration = new Date(end.getTime() - start.getTime());
+      const hours = duration.getUTCHours();
+      const minutes = duration.getUTCMinutes();
+      this.tripDurations[trip.starttime] = `${hours} h ${minutes} min`;
+    });
+  }
 }
+

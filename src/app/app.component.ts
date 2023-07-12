@@ -21,6 +21,12 @@ export class AppComponent {
       starttime: '10:40',
       endtime: '12:20',
     },
+    {
+      from: 'Frankfurt Hbf',
+      to: 'Dortmund Hbf',
+      starttime: '19:30',
+      endtime: '22:59',
+    },
   ];
 
   filteredTrips = this.trips;
@@ -32,14 +38,13 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.trips.forEach(trip => {
-      const start = new Date(`1970-01-01T${trip.starttime}:00`);
-      const end = new Date(`1970-01-01T${trip.endtime}:00`);
+    this.trips.forEach((trip) => {
+      const start = new Date(`2023-01-01T${trip.starttime}:00`);
+      const end = new Date(`2023-01-01T${trip.endtime}:00`);
       const duration = new Date(end.getTime() - start.getTime());
       const hours = duration.getUTCHours();
       const minutes = duration.getUTCMinutes();
-      this.tripDurations[trip.starttime] = `${hours} h ${minutes} min`;
+      this.tripDurations[trip.starttime] = `${hours}h ${minutes}min`;
     });
   }
 }
-

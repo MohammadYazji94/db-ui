@@ -17,7 +17,7 @@ import { ListeComponent } from './liste/liste.component';
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

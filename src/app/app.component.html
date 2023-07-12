@@ -1,31 +1,43 @@
-<h2>DB Fahrplananzeige</h2>
+<div>
+  <h2>DB Fahrplananzeige</h2>
+  <i class="pi pi-minus db-icon"></i>
+</div>
 
-<div class="div1 div-container">
-    <p-button label="von Frankfurt" class="buttons" styleClass="p-button-raised p-button-sm p-button-danger" (click)="filterTrips('Frankfurt Hbf', 'from')"></p-button>
-    <p-button label="nach Frankfurt" class="buttons" styleClass="p-button-raised p-button-sm p-button-danger" (click)="filterTrips('Frankfurt Hbf', 'to')"></p-button>
+<div class="div-container">
+  <p-button
+    label="Von Frankfurt"
+    class="buttons"
+    styleClass="p-button-raised p-button-sm p-button-danger"
+    (click)="filterTrips('Frankfurt Hbf', 'from')"
+  ></p-button>
+  <p-button
+    label="Nach Frankfurt"
+    class="buttons"
+    styleClass="p-button-raised p-button-sm p-button-danger"
+    (click)="filterTrips('Frankfurt Hbf', 'to')"
+  ></p-button>
 </div>
 
 <div class="lists">
   <nav class="navi" *ngFor="let trip of filteredTrips">
-
     <div class="start">
       <span class="startlocation">
-        <span class="startlocation-name location-name">{{trip.from}}</span>
-        <span class="pi pi-circle big-circle" style="color: #828181"></span>
-        <span class="starttime location-time">{{trip.starttime}} Uhr</span>
+        <span class="startlocation-name location-name">{{ trip.from }}</span>
+        <span class="pi pi-circle circle"></span>
+        <span class="starttime location-time">{{ trip.starttime }} Uhr</span>
       </span>
     </div>
 
-    <div class="dauer" style="color: #828181">{{tripDurations[trip.starttime]}}</div>
+    <div class="dauer" style="color: grey">
+      {{ tripDurations[trip.starttime] }}
+    </div>
 
     <div class="end">
       <span class="endlocation">
-        <span class="endlocation-name location-name">{{trip.to}}</span>
-        <span class="pi pi-circle big-circle" style="color: #828181"></span>
-        <span class="endtime location-time">{{trip.endtime}} Uhr</span>
+        <span class="endlocation-name location-name">{{ trip.to }}</span>
+        <span class="pi pi-circle circle"></span>
+        <span class="endtime location-time">{{ trip.endtime }} Uhr</span>
       </span>
     </div>
-
   </nav>
 </div>
-

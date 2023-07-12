@@ -1,84 +1,94 @@
 .div-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  
-  ::ng-deep .p-button {
-    background-color: #ec0016 !important;
-    border-color: #ec0016 !important;
-    color: #ffffff !important;
-  }
-  p-button:first-child {
-    margin-right: 10px;
-  }
-  
-  .tables {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  
-  .lists {
-    margin-top: 11%;
-  }
-  
-  .navi {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative; /* Damit das Pseudo-Element relativ zu diesem Element positioniert wird */
-      padding: 10px 0 ;
-  }
-  
-  .navi::after {
-      content: "";
-      position: absolute;
-      top: 51%; /* Zentriert die Linie vertikal */
-      left: 0;
-      right: 0;
-      height: 2px; /* Höhe der Linie */
-      background: #828181; /* Farbe der Linie */
-      z-index: -1; /* Stellt sicher, dass die Linie hinter den anderen Elementen liegt */
-      margin: 0px 15px 0px 15px;
-  }
-  
-  .start, .end {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 1; /* Stellt sicher, dass die Kreise vor der Linie liegen */
-  }
-  
-  .startlocation {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  .endlocation {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .location-name {
-    margin-bottom: 8%;
-  }
-  .location-time {
-    margin-top: 4%;
-    font-size: 0.8em;
-  }
-  
-  .big-circle {
-    font-size: 1rem;
-  }
-  
-  .dauer {
-    position: absolute;
-    margin: 0 auto 3% auto;
-    padding-left: 45%;
-    font-size: 0.8em;
-  }
+  position: relative;
+  bottom: 10px;
+}
+
+::ng-deep .p-button {
+  background-color: #ec0016 !important;
+  border-color: #ec0016 !important;
+  color: #ffffff !important;
+}
+p-button:first-child {
+  margin-right: 10px;
+}
+
+.tables {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.lists {
+  margin: 10% auto auto auto;
+}
+
+.navi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Damit das Pseudo-Element relativ zu diesem Element positioniert wird */
+  padding: 15px 0;
+}
+
+.navi::after {
+  content: "";
+  position: absolute;
+  top: 54%; /* Zentriert die Linie vertikal */
+  left: 0;
+  right: 0;
+  height: 3px; /* Höhe der Linie */
+  background: silver; /* Farbe der Linie */
+  z-index: -1; /* Stellt sicher, dass die Linie hinter den anderen Elementen liegt */
+  margin: 0px 12px 0px 12px;
+}
+
+.start,
+.end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1; /* Stellt sicher, dass die Kreise vor der Linie liegen */
+}
+
+.startlocation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.endlocation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.location-name {
+  margin-bottom: 8%;
+}
+.location-time {
+  margin-top: 4%;
+  font-size: 0.7em;
+  color: #2c2c2c;
+}
+
+.circle {
+  font-size: 0.8rem;
+  color: silver;
+}
+
+.dauer {
+  position: absolute;
+  left: 50%; /* Positioniert das Element horizontal in der Mitte */
+  transform: translate(-50%, -50%); /* Verschiebt das Element zurück um die Hälfte seiner eigenen Breite und Höhe, um es genau zu zentrieren */
+  font-size: 0.6em;
+  margin-bottom: 1%;
+}
+
+
+.db-icon {
+  position: relative;
+  top: -30px;
+  color: #ec0016;
+  font-size: 2.2rem;
+}

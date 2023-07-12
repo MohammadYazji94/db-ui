@@ -1,72 +1,78 @@
-
-
 .div-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-}
-
-::ng-deep .p-button {
-    background-color: #EC0016 !important;
-    border-color: #EC0016 !important;
-    color: #FFFFFF !important; 
-        
-    
-}
-p-button:first-child {
+  }
+  
+  ::ng-deep .p-button {
+    background-color: #ec0016 !important;
+    border-color: #ec0016 !important;
+    color: #ffffff !important;
+  }
+  p-button:first-child {
     margin-right: 10px;
-}
-
-
-.tables {
+  }
+  
+  .tables {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-}
-
-.lists {
+  }
+  
+  .lists {
     margin-top: 11%;
-    
-}
-
-.navi {}
-
-.start {
-    margin-bottom: 5%;
-}
-
-.startlocation, .circle-container{
+  }
+  
+  .navi {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative; /* Damit das Pseudo-Element relativ zu diesem Element positioniert wird */
+      padding: 10px 0 ;
+  }
+  
+  .navi::after {
+      content: "";
+      position: absolute;
+      top: 48%; /* Zentriert die Linie vertikal */
+      left: 0;
+      right: 0;
+      height: 2px; /* Höhe der Linie */
+      background: grey; /* Farbe der Linie */
+      z-index: -1; /* Stellt sicher, dass die Linie hinter den anderen Elementen liegt */
+      margin: 0px 15px 0px 15px;
+  }
+  
+  .start, .end {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1; /* Stellt sicher, dass die Kreise vor der Linie liegen */
+  }
+  
+  .startlocation {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.endlocation {
+    justify-content: center;
+  }
+  .endlocation {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
-}
+    justify-content: center;
+  }
+  .location-name {
+    margin-bottom: 5%;
+  }
   
-.circle-container {
-    position: relative;
-    display: inline-block;
-    
-}
-  
-.big-circle {
+  .big-circle {
     font-size: 1rem;
-}
+  }
   
-.small-circle {
-    font-size: 0.5rem;
+  .dauer {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-  
-  
+    margin: 0 50% 4% 50%;
+  }

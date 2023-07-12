@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListeComponent } from './liste/liste.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ListeComponent } from './liste/liste.component';
     AppRoutingModule,
     ButtonModule,
     BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
